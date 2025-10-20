@@ -61,44 +61,39 @@ h1, h2, h3 {
     animation: bounce 2s infinite;
 }
 
-/* --- 3. Stili delle Sezioni con Divisori a Onda (SVG) --- */
+/* --- 3. Aggiornamento per Stili Divisori a Onda --- */
 section {
-    padding: 80px 20px;
+    padding: 80px 20px 120px 20px; /* Aumentato il padding inferiore per fare spazio all'onda */
     text-align: center;
-    position: relative; /* Necessario per i divisori */
+    position: relative; /* FONDAMENTALE: mantiene l'onda ancorata alla sezione */
 }
 
-/* Aggiungiamo un divisore a onda tra le sezioni! */
 .wave-divider {
     position: absolute;
-    bottom: -1px; /* Posizionato in basso per non creare spazi */
+    bottom: 0; /* Ancorata perfettamente al fondo della sezione */
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
 }
+
 .wave-divider svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 100px; /* Altezza dell'onda */
-}
-.wave-divider .shape-fill {
-    fill: var(--bianco-panna); /* Colore dello sfondo della sezione successiva */
+    height: 100px; /* Altezza standard per PC */
 }
 
-section h2 {
-    font-size: 2.8em;
-    margin-bottom: 10px;
-    color: var(--blu-notte);
-}
-section .subtitle {
-    font-size: 1.1em;
-    font-weight: 300;
-    max-width: 700px;
-    margin: 0 auto 50px auto;
-    color: #555;
+/* --- NUOVO: Regola specifica per Smartphone --- */
+@media (max-width: 768px) {
+    section {
+        padding-bottom: 80px; /* Meno spazio extra su mobile */
+    }
+    
+    .wave-divider svg {
+        height: 50px; /* L'onda diventa più bassa su mobile per non dare fastidio */
+    }
 }
 
 /* --- 4. Galleria con Effetto Hover Migliorato --- */
