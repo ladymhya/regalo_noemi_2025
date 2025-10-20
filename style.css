@@ -190,14 +190,12 @@ section {
 
 /* --- 6. Messaggio Finale MIGLIORATO --- */
 .final-message {
-    /* Sfondo stellato con un gradiente scuro sopra per leggibilità */
-    background: 
-        linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
-        url('assets/images/stars-bg.jpg') no-repeat center center/cover;
+    /* MODIFICATO: Rimosso lo sfondo con le stelle per un colore solido e uniforme */
+    background-color: var(--blu-notte); 
     color: white;
     padding: 120px 20px;
     text-align: center;
-    position: relative; /* Necessario per effetti futuri */
+    position: relative; 
 }
 
 /* Aggiungiamo un contenitore per il testo per un miglior controllo */
