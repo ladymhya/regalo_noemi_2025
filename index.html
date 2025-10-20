@@ -6,41 +6,42 @@
     <title>Una Sorpresa per Te</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Sezione Iniziale con Immagine Manga -->
     <header class="hero">
         <div class="hero-content">
-            <h1>Per la mia Dottoressa preferita</h1>
-            <p>Un traguardo incredibile merita una celebrazione indimenticabile. Congratulazioni e buon compleanno, amore mio.</p>
+            <h1>Per la mia Dottoressa</h1>
+            <p>Un traguardo incredibile che merita una celebrazione speciale. Sono così fiero di te. Congratulazioni e buon compleanno.</p>
             <p class="scopri">Scorri per scoprire la tua sorpresa...</p>
         </div>
     </header>
 
-    <!-- Sezione Galleria Manga -->
+    <!-- Sezione Galleria Manga con Didascalie Personalizzate -->
     <section class="gallery">
-        <h2>La nostra storia, in stile manga</h2>
+        <h2>La nostra storia, tra passato e futuro</h2>
         <div class="gallery-container">
             <div class="gallery-item">
-                <img src="path/to/manga-image-1.jpg" alt="Noi versione Manga 1">
-                <p>Ricordi quella volta a...?</p>
+                <img src="assets/images/a_cariati.png" alt="Noi al mare in Calabria in stile manga">
+                <p>Il sole della Calabria, dove tutto è iniziato.</p>
             </div>
             <div class="gallery-item">
-                <img src="path/to/manga-image-2.jpg" alt="Noi versione Manga 2">
-                <p>Il nostro primo...</p>
+                <img src="assets/images/a_bologna.png" alt="Noi a Bologna in stile manga">
+                <p>Sotto i portici di Bologna, costruendo la nostra storia.</p>
             </div>
             <div class="gallery-item">
-                <img src="path/to/manga-image-3.jpg" alt="Noi versione Manga 3">
-                <p>Indimenticabile.</p>
+                <img src="assets/images/in_giappone.png" alt="Noi in Giappone in stile manga">
+                <p>E la prossima avventura che ci aspetta: il Giappone.</p>
             </div>
         </div>
     </section>
 
-    <!-- NUOVO: Aggiungi questo prima della sezione "destinations" -->
-    <div style="background-color: #F7D9D9;"> <!-- Sfondo dello stesso colore della sezione successiva -->
+    <!-- Divisore a Onda -->
+    <div style="background-color: #F7D9D9;">
       <div class="wave-divider">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
@@ -50,43 +51,70 @@
 
     <!-- Sezione Destinazioni -->
     <section class="destinations">
-        <h2>Un viaggio per noi due nel 2026</h2>
-        <p class="intro">Ho pensato a un regalo speciale: un viaggio di 3/4 giorni in Europa, tutto pagato. Sceglieremo insieme quando e dove, ma nel frattempo, ecco qualche idea...</p>
+        <h2>E dopo il Giappone?</h2>
+        <p class="subtitle">Dopo tanto studio, ho pensato che meritiamo un'altra avventura da sognare insieme. Ecco qualche idea per il 2026.</p>
+        
         <div class="destinations-container">
             <!-- Opzione 1: Scozia -->
             <div class="destination-card">
-                <img src="path/to/scozia.jpg" alt="Edimburgo, Scozia">
-                <h3>Magia in Scozia</h3>
-                <p>Tra i misteri di Edimburgo e i paesaggi sconfinati delle Highlands. Per perdersi in un'atmosfera da favola gotica.</p>
+                <img src="assets/images/scozia.png" alt="Paesaggio delle Highlands scozzesi">
+                <div class="card-content">
+                    <h3>Mistero e Leggenda in Scozia</h3>
+                    <p>Tra le antiche vie di Edimburgo e la natura selvaggia delle Highlands. Una terra di castelli, laghi avvolti nella nebbia e racconti secolari.</p>
+                    <a href="#dettagli-regalo" class="cta">E se andassimo qui? &rarr;</a>
+                </div>
             </div>
-            <!-- Opzione 2: Lisbona -->
+            <!-- Opzione 2: Portogallo -->
             <div class="destination-card">
-                <img src="path/to/lisbona.jpg" alt="Lisbona, Portogallo">
-                <h3>Colori di Lisbona</h3>
-                <p>Il fascino malinconico del Fado, i vicoli colorati e la brezza dell'oceano. Una città da vivere con lentezza.</p>
+                <img src="assets/images/portogallo.png" alt="Un tram giallo a Lisbona, Portogallo">
+                <div class="card-content">
+                    <h3>Oceano e Colori in Portogallo</h3>
+                    <p>Dal fascino di Lisbona, alle onde dell'oceano che si infrangono sulle scogliere dorate. Un paese caldo, vibrante e pieno di anima.</p>
+                    <a href="#dettagli-regalo" class="cta">E se andassimo qui? &rarr;</a>
+                </div>
             </div>
-            <!-- Opzione 3: Lofoten -->
+            <!-- Opzione 3: Norvegia -->
             <div class="destination-card">
-                <img src="path/to/lofoten.jpg" alt="Lofoten, Norvegia">
-                <h3>Luci del Nord alle Lofoten</h3>
-                <p>Un'avventura sotto l'aurora boreale, tra montagne a picco sul mare e villaggi di pescatori fuori dal tempo.</p>
+                <img src="assets/images/norvegia.png" alt="Aurora boreale sui fiordi norvegesi">
+                <div class="card-content">
+                    <h3>La Natura Maestosa della Norvegia</h3>
+                    <p>Di fronte allo spettacolo dei fiordi imponenti e sotto le danze magiche dell'aurora boreale. Un'avventura nella bellezza pura del mondo.</p>
+                    <a href="#dettagli-regalo" class="cta">E se andassimo qui? &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Dettagli del Regalo con ID per lo scroll -->
+    <section class="gift-details" id="dettagli-regalo">
+        <h2>In cosa consiste il regalo?</h2>
+        <p class="subtitle">Questo è il mio modo per festeggiarti e dirti quanto te lo meriti. Tu dovrai solo scegliere quando e dove, e preparare la valigia.</p>
+        <div class="details-container">
+            <div class="detail-item">
+                <div class="icon">✈️</div> 
+                <h3>Volo o Treno A/R</h3>
+                <p>Il mezzo più comodo per raggiungere la nostra meta, senza pensieri.</p>
+            </div>
+            <div class="detail-item">
+                <div class="icon">🏨</div>
+                <h3>Soggiorno Speciale</h3>
+                <p>Un posto incantevole dove rilassarci e goderci il nostro tempo per 3 o 4 notti.</p>
+            </div>
+            <div class="detail-item">
+                <div class="icon">🌟</div>
+                <h3>Un'Attività da Ricordare</h3>
+                <p>Una cena con vista, un tour avventuroso o una caccia all'aurora... un'esperienza unica solo per noi.</p>
             </div>
         </div>
     </section>
 
-    <!-- NUOVO: Aggiungi questo prima della sezione "destinations" -->
-    <div style="background-color: #F7D9D9;"> <!-- Sfondo dello stesso colore della sezione successiva -->
-      <div class="wave-divider">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-          </svg>
-      </div>
-    </div>
-
-    <!-- Messaggio Finale -->
+    <!-- Messaggio Finale MIGLIORATO -->
     <footer class="final-message">
-        <h2>Sei pronta a partire?</h2>
-        <p>Questo è solo l'inizio. Non vedo l'ora di decidere con te la nostra prossima avventura e di continuare a celebrare ogni tuo successo. <br>Con tutto il mio amore.</p>
+        <div class="final-message-content">
+            <h2>Allora, sei pronta a partire?</h2>
+            <p>Sono incredibilmente fiero di te e di tutto quello che hai raggiunto. E adesso... che la nostra prossima avventura abbia inizio.</p>
+            <p class="signature">Con amore.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

@@ -10,6 +10,10 @@
     --bianco-panna: #FDFDFD;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -25,7 +29,7 @@ h1, h2, h3 {
 /* --- 2. Sezione Hero con Gradiente e Animazione --- */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.4)), url('assets/images/hero-background.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.4)), url('assets/images/laurea_compleanno.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,6 +51,8 @@ h1, h2, h3 {
 .hero p {
     font-size: 1.3em;
     max-width: 600px;
+    margin-left: auto;   /* <-- Aggiungi questa riga */
+    margin-right: auto;  /* <-- E aggiungi questa riga */
 }
 
 .scopri {
@@ -187,24 +193,109 @@ section .subtitle {
     transform: translateX(5px);
 }
 
-/* --- 6. Messaggio Finale --- */
+/* --- 6. Messaggio Finale MIGLIORATO --- */
 .final-message {
-    background-color: var(--blu-notte);
+    /* Sfondo stellato con un gradiente scuro sopra per leggibilità */
+    background: 
+        linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
+        url('assets/images/stars-bg.jpg') no-repeat center center/cover;
     color: white;
-    padding: 100px 20px;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative; /* Necessario per effetti futuri */
 }
+
+/* Aggiungiamo un contenitore per il testo per un miglior controllo */
+.final-message-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .final-message h2 {
     font-size: 3em;
     color: white;
+    margin-bottom: 40px;
+    position: relative;
 }
+
+/* Divisore dorato ed elegante sotto al titolo */
+.final-message h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: var(--oro);
+    margin: 30px auto 0 auto;
+    opacity: 0.8;
+}
+
 .final-message p {
     font-size: 1.2em;
     font-weight: 300;
-    max-width: 600px;
-    margin: 20px auto 0 auto;
+    line-height: 1.7;
     opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* Stile "firma" per il tuo messaggio finale */
+.final-message .signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2em;
+    color: rgba(212, 175, 55, 0.95); /* Oro leggermente trasparente */
+    margin-top: 20px;
+    margin-bottom: 0;
+    opacity: 1;
 }
 
 /* --- 7. Animazioni (invariate) --- */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-15px); } 60% { transform: translateY(-8px); } }
+
+/* --- 8. Sezione Dettagli Regalo --- */
+.gift-details {
+    background-color: var(--bianco-panna);
+    padding-top: 50px; /* Riduciamo lo spazio se non c'è l'onda sopra */
+}
+
+.details-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detail-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    width: 280px;
+    text-align: center;
+    border-top: 4px solid var(--oro); /* Dettaglio color oro */
+    transition: transform 0.3s;
+}
+
+.detail-item:hover {
+    transform: translateY(-8px);
+}
+
+.detail-item .icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.detail-item h3 {
+    font-size: 1.4em;
+    color: var(--blu-notte);
+    margin-bottom: 15px;
+}
+
+.detail-item p {
+    font-weight: 300;
+    line-height: 1.6;
+    color: #666;
+}
