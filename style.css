@@ -70,7 +70,7 @@ section {
 
 .wave-divider {
     position: absolute;
-    bottom: 1px;
+    bottom: -3px;
     left: 0;
     width: 100%;
     overflow: hidden;
