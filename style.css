@@ -1,5 +1,5 @@
 /* 
-    NUOVO STYLE.CSS - Versione Colorata ed Elegante
+    STYLE.CSS - Versione Finale con Pop-up
 */
 
 /* --- 1. Impostazioni Globali e Palette Colori --- */
@@ -45,14 +45,14 @@ h1, h2, h3 {
 .hero h1 {
     font-size: 3.8em;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Ombra per leggibilità */
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
 .hero p {
     font-size: 1.3em;
     max-width: 600px;
-    margin-left: auto;   /* <-- Aggiungi questa riga */
-    margin-right: auto;  /* <-- E aggiungi questa riga */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .scopri {
@@ -61,16 +61,16 @@ h1, h2, h3 {
     animation: bounce 2s infinite;
 }
 
-/* --- 3. Aggiornamento per Stili Divisori a Onda --- */
+/* --- 3. Stili Divisori a Onda --- */
 section {
-    padding: 80px 20px 120px 20px; /* Aumentato il padding inferiore per fare spazio all'onda */
+    padding: 80px 20px 120px 20px;
     text-align: center;
-    position: relative; /* FONDAMENTALE: mantiene l'onda ancorata alla sezione */
+    position: relative;
 }
 
 .wave-divider {
     position: absolute;
-    bottom: 0; /* Ancorata perfettamente al fondo della sezione */
+    bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -82,17 +82,16 @@ section {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 100px; /* Altezza standard per PC */
+    height: 100px;
 }
 
-/* --- NUOVO: Regola specifica per Smartphone --- */
 @media (max-width: 768px) {
     section {
-        padding-bottom: 80px; /* Meno spazio extra su mobile */
+        padding-bottom: 80px;
     }
     
     .wave-divider svg {
-        height: 50px; /* L'onda diventa più bassa su mobile per non dare fastidio */
+        height: 50px;
     }
 }
 
@@ -120,7 +119,7 @@ section {
     transition: transform 0.4s, box-shadow 0.4s;
 }
 .gallery-item img:hover {
-    transform: scale(1.05); /* Ingrandisce l'immagine al passaggio del mouse */
+    transform: scale(1.05);
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 .gallery-item p {
@@ -132,10 +131,6 @@ section {
 /* --- 5. Sezione Destinazioni con Card più Ricche --- */
 .destinations {
     background-color: var(--rosa-cipria);
-}
-/* Cambiamo il colore dell'onda per la sezione rosa */
-.destinations .wave-divider .shape-fill {
-    fill: var(--rosa-cipria);
 }
 
 .destinations-container {
@@ -151,7 +146,7 @@ section {
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
-    text-align: left; /* Allineamo il testo a sinistra */
+    text-align: left;
 }
 .destination-card:hover {
     transform: translateY(-10px);
@@ -175,7 +170,6 @@ section {
     font-weight: 300;
     line-height: 1.6;
 }
-/* Aggiungiamo un "bottone" finto per un tocco di classe */
 .card-content .cta {
     display: inline-block;
     margin-top: 15px;
@@ -183,14 +177,20 @@ section {
     color: var(--oro);
     text-decoration: none;
     transition: transform 0.3s;
+    /* Stili per resettare l'aspetto del bottone */
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Eredita il font corretto */
+    font-size: 1em; /* Eredita la dimensione corretta */
+    cursor: pointer;
 }
 .card-content .cta:hover {
     transform: translateX(5px);
 }
 
-/* --- 6. Messaggio Finale MIGLIORATO --- */
+/* --- 6. Messaggio Finale CORRETTO --- */
 .final-message {
-    /* MODIFICATO: Rimosso lo sfondo con le stelle per un colore solido e uniforme */
     background-color: var(--blu-notte); 
     color: white;
     padding: 120px 20px;
@@ -198,20 +198,16 @@ section {
     position: relative; 
 }
 
-/* Aggiungiamo un contenitore per il testo per un miglior controllo */
 .final-message-content {
     max-width: 700px;
     margin: 0 auto;
 }
-
 .final-message h2 {
     font-size: 3em;
     color: white;
     margin-bottom: 40px;
     position: relative;
 }
-
-/* Divisore dorato ed elegante sotto al titolo */
 .final-message h2::after {
     content: '';
     display: block;
@@ -221,7 +217,6 @@ section {
     margin: 30px auto 0 auto;
     opacity: 0.8;
 }
-
 .final-message p {
     font-size: 1.2em;
     font-weight: 300;
@@ -229,25 +224,22 @@ section {
     opacity: 0.9;
     margin-bottom: 40px;
 }
-
-/* Stile "firma" per il tuo messaggio finale */
 .final-message .signature {
     font-family: 'Dancing Script', cursive;
     font-size: 2.2em;
-    color: rgba(212, 175, 55, 0.95); /* Oro leggermente trasparente */
+    color: rgba(212, 175, 55, 0.95);
     margin-top: 20px;
     margin-bottom: 0;
     opacity: 1;
 }
 
-/* --- 7. Animazioni (invariate) --- */
+/* --- 7. Animazioni --- */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-15px); } 60% { transform: translateY(-8px); } }
 
 /* --- 8. Sezione Dettagli Regalo --- */
 .gift-details {
     background-color: var(--bianco-panna);
-    padding-top: 50px; /* Riduciamo lo spazio se non c'è l'onda sopra */
 }
 
 .details-container {
@@ -260,7 +252,6 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
-
 .detail-item {
     background: white;
     padding: 30px;
@@ -268,27 +259,89 @@ section {
     box-shadow: 0 5px 25px rgba(0,0,0,0.08);
     width: 280px;
     text-align: center;
-    border-top: 4px solid var(--oro); /* Dettaglio color oro */
+    border-top: 4px solid var(--oro);
     transition: transform 0.3s;
 }
-
 .detail-item:hover {
     transform: translateY(-8px);
 }
-
 .detail-item .icon {
     font-size: 3em;
     margin-bottom: 20px;
 }
-
 .detail-item h3 {
     font-size: 1.4em;
     color: var(--blu-notte);
     margin-bottom: 15px;
 }
-
 .detail-item p {
     font-weight: 300;
     line-height: 1.6;
     color: #666;
+}
+
+/* --- 9. Stili per il Pop-up / Modal --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(44, 62, 80, 0.8);
+    animation: fadeIn 0.5s;
+}
+
+.modal-content {
+    background-color: var(--bianco-panna);
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: var(--blu-notte);
+}
+
+#popup-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#popup-title {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: var(--blu-notte);
+}
+
+#popup-details p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    text-align: left;
+    color: #333;
+}
+
+#popup-details p strong {
+    color: var(--blu-notte);
 }

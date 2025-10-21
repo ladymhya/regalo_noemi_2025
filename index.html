@@ -53,34 +53,36 @@
         <p class="subtitle">Dopo tanto studio, ho pensato che meritiamo un'altra avventura da sognare insieme. Ecco qualche idea per il 2026.</p>
         
         <div class="destinations-container">
-            <!-- Card delle destinazioni... -->
+            <!-- Opzione 1: Scozia -->
             <div class="destination-card">
                 <img src="assets/images/scozia.png" alt="Paesaggio delle Highlands scozzesi">
                 <div class="card-content">
                     <h3>Mistero e Leggenda in Scozia</h3>
                     <p>Tra le antiche vie di Edimburgo e la natura selvaggia delle Highlands. Una terra di castelli, laghi avvolti nella nebbia e racconti secolari.</p>
-                    <a href="#dettagli-regalo" class="cta">E se andassimo qui? &rarr;</a>
+                    <button class="cta" data-destination="scozia">E se andassimo qui? &rarr;</button>
                 </div>
             </div>
+            <!-- Opzione 2: Portogallo -->
             <div class="destination-card">
                 <img src="assets/images/portogallo.png" alt="Un tram giallo a Lisbona, Portogallo">
                 <div class="card-content">
                     <h3>Oceano e Colori in Portogallo</h3>
                     <p>Dal fascino di Lisbona, alle onde dell'oceano che si infrangono sulle scogliere dorate. Un paese caldo, vibrante e pieno di anima.</p>
-                    <a href="#dettagli-regalo" class="cta">E se andassimo qui? &rarr;</a>
+                    <button class="cta" data-destination="portogallo">E se andassimo qui? &rarr;</button>
                 </div>
             </div>
+            <!-- Opzione 3: Norvegia (MODIFICATO) -->
             <div class="destination-card">
-                <img src="assets/images/norvegia.png" alt="Aurora boreale sui fiordi norvegesi">
+                <img src="assets/images/norvegia.png" alt="Fiordi norvegesi">
                 <div class="card-content">
                     <h3>La Natura Maestosa della Norvegia</h3>
-                    <p>Di fronte allo spettacolo dei fiordi imponenti e sotto le danze magiche dell'aurora boreale. Un'avventura nella bellezza pura del mondo.</p>
-                    <a href="#dettagli-regalo" class="cta">E se andassimo qui? &rarr;</a>
+                    <p>Tra montagne maestose che si tuffano in acque profonde. Un'avventura indimenticabile nel cuore della natura scandinava.</p>
+                    <button class="cta" data-destination="norvegia">E se andassimo qui? &rarr;</button>
                 </div>
             </div>
         </div>
 
-        <!-- NUOVO DIVISORE A ONDA 2 (passaggio a Bianco Panna) -->
+        <!-- Divisore a Onda 2 (passaggio a Bianco Panna) -->
         <div class="wave-divider">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: #FDFDFD;"></path>
@@ -104,14 +106,15 @@
                 <h3>Soggiorno Speciale</h3>
                 <p>Un posto incantevole dove rilassarci e goderci il nostro tempo per 3 o 4 giorni.</p>
             </div>
+            <!-- Attività (MODIFICATO) -->
             <div class="detail-item">
                 <div class="icon">🌟</div>
                 <h3>Un'Attività da Ricordare</h3>
-                <p>Una cena con vista, un tour avventuroso o una caccia all'aurora... un'esperienza unica solo per noi.</p>
+                <p>Una cena con vista, un'escursione nella natura o un tour suggestivo... un'esperienza unica solo per noi.</p>
             </div>
         </div>
 
-        <!-- NUOVO DIVISORE A ONDA 3 (passaggio a Blu Notte) -->
+        <!-- Divisore a Onda 3 (passaggio a Blu Notte) -->
         <div class="wave-divider">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: #2C3E50;"></path>
@@ -127,6 +130,19 @@
             <p class="signature">Con amore.</p>
         </div>
     </footer>
+
+    <!-- INIZIO POP-UP / MODAL ITINERARIO -->
+    <div id="itinerary-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="Immagine destinazione" id="popup-image">
+            <h2 id="popup-title"></h2>
+            <div id="popup-details">
+                <!-- I dettagli verranno inseriti qui da JavaScript -->
+            </div>
+        </div>
+    </div>
+    <!-- FINE POP-UP / MODAL ITINERARIO -->
 
     <script src="script.js"></script>
 </body>
