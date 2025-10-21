@@ -70,12 +70,12 @@ section {
 
 .wave-divider {
     position: absolute;
-    bottom: -100px;
+    bottom: 0; /* <-- Riportato a 0 */
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateY(-2px); /* <-- MODIFICATO QUI */
 }
 
 .wave-divider svg {
